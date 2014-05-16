@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+<gradient
+    android:startColor="@color/abs__background_holo_light"
+    android:endColor="@color/abs__background_holo_light"
+    android:centerColor="@color/abs__bright_foreground_disabled_holo_light"
+    android:useLevel="false"
+    android:type="linear"
+    android:angle="0"/>
+</shape>

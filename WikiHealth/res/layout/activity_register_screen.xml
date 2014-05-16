@@ -1,0 +1,204 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".RegisterScreen" >
+
+    <!-- Login progress -->
+
+    <LinearLayout
+        android:id="@+id/login_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/login_status_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/login_progress_signing_in"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+
+    <!-- Login form -->
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            style="@style/LoginFormContainer"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_password"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true" />
+            <EditText
+                android:id="@+id/confirmpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Confirm Password"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/screenname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Screen Name"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+			    android:paddingTop="10dp"
+                android:layout_height="wrap_content"
+                android:text="Gender"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+			
+            <RadioGroup
+                android:id="@+id/radioGroup1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:layout_gravity="right">
+
+                <RadioButton
+                    android:id="@+id/maleradio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/femaleradio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="female" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+			    android:paddingTop="10dp"
+                android:text="Birthday"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+          <TableLayout
+			    android:id="@+id/TableLayout01"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:minHeight="90px" >
+			
+              
+              <TableRow  android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingTop="10dp" android:paddingBottom="10dp">
+			                
+		                <TextView
+			                android:id="@+id/day"
+			                android:layout_width="match_parent"
+			                android:layout_height="wrap_content"
+			                android:maxLines="1"
+			                android:text="Day"
+			                android:paddingRight="10dp"
+			                android:singleLine="true" />
+			                
+		                <TextView
+		                	android:id="@+id/month"
+			                android:layout_width="match_parent"
+			                android:layout_height="wrap_content"
+			                android:maxLines="1"
+			                android:paddingRight="10dp"
+			                android:text="Month"
+			                android:singleLine="true" />
+			                
+		                <TextView
+			                android:id="@+id/year"
+			                android:layout_width="match_parent"
+			                android:layout_height="wrap_content"
+			                android:text="Year"
+			                android:maxLines="1"
+			                android:singleLine="true" />
+                
+			</TableRow>
+			
+				<TableRow  android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingTop="5dp" android:paddingBottom="10dp">
+			                
+		                <EditText
+			                android:id="@+id/daytext"
+			                android:layout_width="match_parent"
+			                android:layout_height="wrap_content"
+			                android:hint="DD"
+			                android:paddingRight="10dp"
+			                android:maxLines="1"
+			                android:inputType="number"
+			                android:singleLine="true" />
+			                
+		                <EditText
+		                android:id="@+id/monthtext"
+			                android:layout_width="match_parent"
+			                android:layout_height="wrap_content"
+			                android:hint="MM"
+			                android:paddingRight="10dp"
+			                android:maxLines="1"
+			                android:inputType="number"
+			                android:singleLine="true" />
+			                
+		                <EditText
+			                android:id="@+id/yeartext"
+			                android:layout_width="match_parent"
+			                android:layout_height="wrap_content"
+			                android:hint="YYYY"
+			                android:paddingRight="10dp"
+			                android:maxLines="1"
+			                android:inputType="number"
+			                android:singleLine="true" />
+                
+			</TableRow>
+		</TableLayout>
+            <Button
+                android:id="@+id/sign_in_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:text="Register" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</merge>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WikiHealth</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="main_status_lbl">Status:</string>
+    <string name="status_not_monitoring">Not Monitoring</string>
+    <string name="startButton">Start</string>
+    <string name="settingsButton">Settings</string>
+    <string name="aboutButton">About</string>
+    <string name="title_activity_main_acivity">MainAcivity</string>
+    <string name="status_monitoring">Monitoring</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_sensors">Sensors</string>
+    <string name="title_activity_about">About</string>
+    <string name="title_activity_actionbars">Actionbars</string>
+    <string name="title_activity_vpi_abs_test">VpiAbsTestActivity</string>
+    <string name="title_activity_f">FActivity</string>
+    <string name="title_activity_tagging_screen">TaggingScreen</string>
+    <string name="title_activity_map">Map</string>
+	<string name="accelerometer_description">Measures the acceleration force in m/s2 that is applied to a device on all three physical axes (x, y, and z), including the force of gravity.</string>
+	<string name="ambient_temperature_description">Measures the ambient room temperature in degrees Celsius (°C). See note below.</string>
+	<string name="gravity_description">Measures the force of gravity in m/s2 that is applied to a device on all three physical axes (x, y, z).</string>
+	<string name="gyroscope_description">Measures a device\'s rate of rotation in rad/s around each of the three physical axes (x, y, and z).</string>
+	<string name="light_description">Measures the ambient light level (illumination) in lx</string>
+	<string name="magnetic_description">Measures the ambient geomagnetic field for all three physical axes (x, y, z) in μT</string>
+	<string name="orientation_description">Measures degrees of rotation that a device makes around all three physical axes (x, y, z). </string>
+	<string name="pressure_description">Measures the ambient air pressure in hPa or mbar.</string>
+	<string name="proximity_description">Measures the proximity of an object in cm relative to the view screen of a device.</string>
+	<string name="humidity_description">Measures the relative ambient humidity in percent (%).</string>
+	<string name="rotation_description">Measures the orientation of a device by providing the three elements of the device\'s rotation vector</string>
+	<string name="temperature_description">Measures the temperature of the device in degrees Celsius (°C).</string>
+	
+	
+	
+	
+	<!--
+    /***
+    *? zephyr
+    /
+    -->
+
+    <string name="hxmDemoAppName">Zephyr HxM BT Demo by Pye Brook Company, Inc.</string>
+    <string name="notConnected">You are not connected to a Zephyr HxM</string>
+    <string name="btNotEnabled">Bluetooth not enabled.</string>
+    <string name="connecting">connecting...</string>
+    <string name="connectedTo">connected: </string>
+    <string name="initializing">initializing</string>
+    <string name="nonePaired">No Zephyr HxM devices have been paired?</string>
+    <string name="noBluetooth">No Bluetooth?</string>
+
+    <!--
+    	Some identifiers used to pass information around our application 
+    	Defining them within this resource ensures that each value is unique 
+    	and allows us to associate a human readable string to use when
+    	logging or displaying debugging and error messages    	
+    -->
+
+    <string name="HXM_SERVICE_MSG_STATE">MESSAGE_STATE_CHANGE: message from HxM service indicating that the state of the service has been updated, and may have changed</string>
+    <string name="HXM_SERVICE_MSG_READ">HXM_SERVICE_MSG_READ: message from HxM service with data read from the device</string>
+    <string name="HXM_SERVICE_MSG_DEVICE_NAME">HXM_SERVICE_MSG_DEVICE_NAME: message from HxM service indicating the name of the device that a connection is associated with</string>
+    <string name="HXM_SERVICE_MSG_TOAST">HXM_SERVICE_MSG_TOAST: message from HxM service requesting a toast be shown to the user</string>
+    <string name="HXM_SERVICE_RESTING">HXM_SERVICE_RESTING: HxM service is at rest</string>
+    <string name="HXM_SERVICE_CONNECTING">HXM_SERIVICE_CONNECTING: HxM service is trying to connect to an HxM</string>
+    <string name="HXM_SERVICE_CONNECTED">HXM_SERVICE_CONNECTED: HxM service is connected to a HxM</string>
+    <string name="title_activity_calendar_creator">CalendarCreator</string>
+
+    <!-- Calendar -->
+    <string name="about_summary">Android Calendar View Demo V0.5.0</string>
+    <string name="about">About</string>
+    <string name="pick_summary">start with ACTION_PICK</string>
+    <string name="pick">Pick up a Date</string>
+    <string name="show_summary">start with ACTION_VIEW</string>
+    <string name="show">Show Calendar</string>
+    <string name="hint">Hint: touch the first or last day of month to move to previous or next month.</string>
+    <string name="title_activity_events">EventsActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_enter_screen">EnterScreen</string>
+
+</resources>

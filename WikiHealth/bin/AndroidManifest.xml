@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="uk.ac.imperial.wikihealth"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="16" />
+
+    <!-- Permissions -->
+
+
+    <!-- Google Maps -->
+    <permission
+        android:name="uk.ac.imperial.wikihealth.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="uk.ac.imperial.wikihealth.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <!-- Google Maps and Upload operation -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Heart rate monitor -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <!-- Labeling Operation -->
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
+    <!-- Application Components -->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/CalendarTheme" >
+		<service android:name="uk.ac.imperial.wikihealth.Monitoring.BackgroundMonitoring">
+		    <intent-filter android:label="stop" >
+                <action android:name="uk.ac.imperial.wikihealth.Monitoring.MY_SERVICE"/>
+            </intent-filter>
+		    
+		</service>
+		
+		
+        <!-- Activities -->
+        <activity
+            android:name="uk.ac.imperial.wikihealth.UI.SplashScreen"
+			android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:theme="@style/FullscreenTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="uk.ac.imperial.wikihealth.UI.StatusScreen"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="uk.ac.imperial.wikihealth.MainAcivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_main_acivity" >
+        </activity>
+        <activity
+            android:name="uk.ac.imperial.wikihealth.UI.SettingsScreen"
+                        android:configChanges="orientation|keyboardHidden|screenSize"
+            
+            android:label="@string/title_activity_settings" >
+        </activity>
+        <activity
+            android:name="uk.ac.imperial.wikihealth.UI.SensorsScreen"
+                        android:configChanges="orientation|keyboardHidden|screenSize"
+            
+            android:label="@string/title_activity_sensors" >
+        </activity>
+        <activity
+            android:name="uk.ac.imperial.wikihealth.UI.AboutScreen"
+                        android:configChanges="orientation|keyboardHidden|screenSize"
+            
+            android:label="@string/title_activity_about" >
+        </activity>
+        <activity
+            android:name="uk.ac.imperial.wikihealth.MainLayout"
+                        android:configChanges="orientation|keyboardHidden|screenSize"
+            
+            android:label="@string/title_activity_actionbars" >
+        </activity>
+        <activity
+            android:name="uk.ac.imperial.wikihealth.UI.TabSwipeActivity"
+                        android:configChanges="orientation|keyboardHidden|screenSize"
+            
+            android:label="@string/title_activity_vpi_abs_test" >
+        </activity>
+        <activity
+            android:name="uk.ac.imperial.wikihealth.TabSwipeTestActivity"
+                        android:configChanges="orientation|keyboardHidden|screenSize"
+            
+            android:label="@string/title_activity_vpi_abs_test" >
+        </activity>
+        <activity
+            android:name="uk.ac.imperial.wikihealth.FActivity"
+                        android:configChanges="orientation|keyboardHidden|screenSize"
+            
+            android:label="@string/title_activity_f" >
+        </activity>
+        <activity
+            android:name="uk.ac.imperial.wikihealth.UI.HelpScreen"
+                        android:configChanges="orientation|keyboardHidden|screenSize"
+            
+            android:label="@string/title_activity_tagging_screen" >
+        </activity>
+        <activity
+            android:name="uk.ac.imperial.wikihealth.UI.MapScreen"
+                        android:configChanges="orientation|keyboardHidden|screenSize"
+            
+            android:label="@string/title_activity_map" >
+        </activity>
+        <activity
+            android:name="uk.ac.imperial.wikihealth.UI.HeartRateScreen"
+                        android:configChanges="orientation|keyboardHidden|screenSize"
+            
+            android:label="@string/title_activity_map" >
+        </activity>
+
+        <!-- Google Maps API KEY -->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyAheD-cNDSjd0mcM-hFMZN5squaUcZbSbM" />
+        <activity
+            android:name="uk.ac.imperial.wikihealth.UI.ActivitiesScreen"
+                        android:configChanges="orientation|keyboardHidden|screenSize"
+            
+            android:label="Add Events" >
+        </activity>
+        <activity
+            android:name="uk.ac.imperial.wikihealth.Labeling.EventsDialog"
+                        android:configChanges="orientation|keyboardHidden|screenSize"
+            
+            android:label="Add Event"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name="uk.ac.imperial.wikihealth.UI.RegisterScreen"
+                        android:configChanges="orientation|keyboardHidden|screenSize"
+            
+            android:label="@string/title_activity_login_screen"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+        <activity
+            android:name="uk.ac.imperial.wikihealth.UI.LoginScreen"
+                        android:configChanges="orientation|keyboardHidden|screenSize"
+            
+            android:label="@string/title_activity_login_screen"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+        <activity
+            android:name="uk.ac.imperial.wikihealth.UI.EnterScreen"
+                        android:configChanges="orientation|keyboardHidden|screenSize"
+            
+            android:label="Register/Login">
+        </activity>
+      
+    </application>
+
+</manifest>

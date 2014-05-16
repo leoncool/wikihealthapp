@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background">#F0F0FF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="error">#FF0000</color>
+    <color name="logo_color">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="text_color">#4A4A4A</color>
+    <color name="menu_background">#0088FF</color>
+    <color name="not_monitoring">#FF0000</color>
+    <color name="monitoring">#00FF00</color>
+    <color name="db_status_ok">#00FF00</color>
+    <color name="db_status_medium">#DD9900</color>
+    <color name="db_status_full">#FF0000</color>
+
+</resources>

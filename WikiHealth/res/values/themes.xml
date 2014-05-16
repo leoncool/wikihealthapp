@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CalendarTheme" parent="@style/Theme.Sherlock.Light">
+        <item name="calendarViewStyle">@style/Widget.Holo.Light.CalendarView</item>
+    </style>
+    
+</resources>
+

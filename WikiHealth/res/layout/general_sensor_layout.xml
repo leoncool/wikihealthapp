@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:gravity="center_horizontal">
+    
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Monitoring Settings"
+        android:textSize="@dimen/status_title_size" />
+		
+		<View style="@style/Line"/>
+		
+		
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:paddingTop="10dp" >
+
+		 <CheckBox
+		     android:id="@+id/sensorCheck"
+		     android:layout_width="match_parent"
+		     android:layout_height="wrap_content"
+		     android:layout_gravity="center"
+		     android:checked="true"
+		     android:text="Include in Background Monitoring" />
+	
+	</LinearLayout>
+	
+	 <LinearLayout
+	     android:id="@+id/sensor_monitoring"
+	     android:layout_width="match_parent"
+	     android:layout_height="wrap_content"
+	     android:gravity="left"
+	     android:orientation="horizontal"
+	     android:paddingLeft="8dp"
+	     android:paddingTop="2dp" >
+
+	     <TextView
+	         android:id="@+id/textView2"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:paddingRight="2dp"
+	         android:text="Monitoring Rate: "
+	         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	     <EditText
+	         android:id="@+id/sensorsPeriod"
+	         android:layout_width="58dp"
+	         android:layout_height="wrap_content"
+	         android:layout_weight="0.16"
+	         android:ems="10"
+	         android:inputType="number" >
+
+	         <requestFocus />
+	     </EditText>
+
+	     <TextView
+	         android:id="@+id/textView3"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:text="milliseconds"
+	         android:textAppearance="?android:attr/textAppearanceSmall" />
+	 </LinearLayout>
+
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:paddingRight="8dp" >
+	 <Button
+	     android:id="@+id/sensorsSave"
+	     style="?android:attr/buttonStyleSmall"
+	     android:layout_width="wrap_content"
+	     android:layout_height="29dp"
+	     android:gravity="right"
+	     android:text="Save" />
+	</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin" 
+        android:paddingTop="30dp" >
+
+		
+  		<View style="@style/Line"/>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:text="Measurements"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/status_title_size" />
+
+		<View style="@style/Line"/>
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:paddingLeft="8dp"
+        android:orientation="vertical"   >
+		<TextView
+	         android:id="@+id/desctitle"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:paddingTop="8dp"
+	         android:text="Description: " />
+		
+		<TextView
+            android:id="@+id/sensorsDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" 
+            android:paddingBottom="10dp"
+            android:paddingRight="8dp"/>
+		</LinearLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:layout_gravity="center" 
+        android:gravity="center_horizontal">
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            
+            <TextView
+		            android:id="@+id/labelx"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:paddingRight="10dp"
+		            android:text=""
+		            android:textColor="@color/text_color"
+		            android:textSize="@dimen/status_text_size" />
+		
+		     <TextView
+		            android:id="@+id/valuex"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:paddingRight="10dp"
+		            android:layout_gravity="right"
+		            android:text=""
+		            android:textColor="@color/text_color"
+		            android:textSize="@dimen/status_text_size" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+		     
+            
+            <TextView
+		            android:id="@+id/labely"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:paddingRight="10dp"
+		            android:text=""
+		            android:textColor="@color/text_color"
+		            android:textSize="@dimen/status_text_size" />
+		
+		        <TextView
+		            android:id="@+id/valuey"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:paddingRight="10dp"
+		            android:layout_gravity="right"
+		            android:text=""
+		            android:textColor="@color/text_color"
+		            android:textSize="@dimen/status_text_size" />
+
+		        
+		        
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+		        
+            <TextView
+		            android:id="@+id/labelz"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:paddingRight="10dp"
+		            android:text=""
+		            android:textColor="@color/text_color"
+		            android:textSize="@dimen/status_text_size" />
+		
+		        <TextView
+		            android:id="@+id/valuez"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+   		            android:layout_gravity="right"
+		            android:paddingRight="10dp"
+		            android:text=""
+		            android:textColor="@color/text_color"
+		            android:textSize="@dimen/status_text_size" />
+        </TableRow>
+    </TableLayout>
+    </LinearLayout>
+</LinearLayout>
